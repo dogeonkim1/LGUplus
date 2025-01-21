@@ -4,6 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>display 속성</title>
+  <style>
+    /* li요소를 가로로 나란히 배치하기 */
+    nav ul{
+      list-style: none;
+    }
+
+    nav ul li {
+      display: inline-block; /* 블록 레벨 요소의 성격을 가지면서 가로로 배치하기 위함 */
+      width: 100px;          /* 따라서 너비, 높이 갚을 지정할 수 있게 된다. */
+      height: 40px;
+      line-height: 40px; /*세로 중앙 배치*/
+      text-align: center; /*가로로 중앙에 배치*/
+      border: 1px solid #222;
+      margin: 10px;
+    }
+  </style>
 </head>
 <body>
   <nav>

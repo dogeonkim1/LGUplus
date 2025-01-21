@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박스 모델</title>
+  <style>
+    .wrapper {
+      width: 800px;
+      margin: 10px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    .box{
+      padding: 20px;
+      margin: 10px;
+    }
+    #box1{
+      background-color: yellow;
+      float: left;
+    }
+    #box2{
+      background-color: blue;
+      float: right;
+    }
+    .clear{ /* float 속성을 무시함 */
+      clear: both;
+      padding-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="box" id="box1">박스1</div>
+    <div class="box" id="box2">박스2</div>
+    <p>aasdadasdasdsadasdasdasdadqwdqwdqwdwqdqwdwqdqwdqwdqwd<br>qwdqwdqwwdasdasdasdasdadadasdadasdadadsaaasdadasd
+      aasdadasdasdsadasdasdasdadqwdqwdqwdw<br>asdasdasdasdasdasdasdasdasdsa
+    </p>
+    <p class="clear">aasdadasdasdsadasdasdasdadqwdqwdqwdwqdqwdwqdqwdqwdqwd<br>qwdqwdqwwdasdasdasdasdadadasdadasdadadsaaasdadasd
+      aasdadasdasdsadasdasdasdadqwdqwdqwdw<br>asdasdasdasdasdasdasdasdasdsa
+    </p>
+  </div>
+</body>
+</html>
