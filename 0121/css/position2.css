@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#contents {
+  background: url(../images/07/images/bg.jpg) no-repeat;
+  background-size: cover;
+  width: 800px;
+  height: 500px;
+  position: relative;/*요소의 기준점 지정*/
+}
+
+h1 {
+  color: white;
+  font-size: 120px;
+  text-shadow: 5px 9px 0 #000;
+  position: absolute; /*위치 고정<움직일 요소 지정>*/
+  right: 100px;
+  bottom: 100px;
+}
