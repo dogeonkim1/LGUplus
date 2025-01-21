@@ -1,0 +1,10 @@
+#container {
+  width:350px;
+  margin: 30px auto;
+}
+
+.bear {
+  border-radius: 50%;
+  border: 1px solid #fff;
+  box-shadow: 10px 10px 20px 2px #000;
+}
