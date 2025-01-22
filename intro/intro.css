@@ -7,12 +7,15 @@ body{
   margin: 0 auto;
 }
 
+i {
+  margin-left: 2px;
+  margin-right: 10px;
+}
 .head-img{
-  display: inline-block;
-  width: 250px;
+  width: 120px;
   height: auto;
-  border-radius: 50%;
-
+  border-radius: 3%;
+  float: left;
 }
 
 ul {
@@ -50,10 +53,18 @@ ul {
   height: 200px;
   border-radius: 50%;
   border: 1px solid #222;
-  margin: 20px 0 0 30px;
+  margin: 30px 0 0 10px;
 }
 
+.sec-ul li{
+  margin-top: 20px;
 
+}
+
+h2{
+  text-align: center;
+  margin-top: 100px;
+}
 
 h4{
   text-align: center;
