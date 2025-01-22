@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선형 그라데이션</title>
+  <style>
+    div {
+      border: 1px solid #222;
+      width: 500px;
+      height: 300px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+    }
+
+    .grad1 {
+      background: blue;
+      /*왼쪽 위에서 오른쪽 아래 방향으로 파랑색에서 하얀색으로 그라데이션 효과*/
+      background: linear-gradient(to right bottom, rgb(82, 82, 158), white);
+    }
+    .grad2 {
+      background: red;
+      /*왼쪽 위에서 오른쪽 아래 방향으로 파랑색에서 하얀색으로 그라데이션 효과*/
+      background: linear-gradient(45deg, #f00, #fff);
+    }
+    .grad3 {
+      background: green;
+      /*상단으로부터 30%에 위치한 곳에 중지점 지정 그라데이션*/
+      background: linear-gradient(
+        to bottom, green, white 30%, blue
+      );
+    }
+    .grad4 {
+      background: purple;
+      /*원형 그라데이션(모양을 지정하지 않으면 타원형 기본값)*/
+      background: radial-gradient(
+        white, yellow, red
+      );
+    }
+    .grad5 {
+      background: purple;
+      /*원형 그라데이션(모양을 circle로 지정해 구 형태로 그라데이션)*/
+      background: radial-gradient(
+        circle, white, yellow, red
+      );
+    }
+    .grad6 {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: purple;
+      background: radial-gradient(
+        circle at 20% 20%, white, blue
+      );
+    }
+    .grad7 {
+      background: orange;
+      /*상단으로부터 30%에 위치한 곳에 중지점 지정 그라데이션*/
+      background: radial-gradient(
+        yellow, white, orange
+      );
+    }
+    .grad8 {
+      background: purple;
+      /*상단으로부터 30%에 위치한 곳에 중지점 지정 그라데이션*/
+      background: radial-gradient(
+        yellow, white 10%, orange 60%
+      );
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="grad1"></div>
+  <div class="grad2"></div>
+  <div class="grad3"></div>
+  <div class="grad4"></div>
+  <div class="grad5"></div>
+  <div class="grad6"></div>
+  <div class="grad7"></div>
+  <div class="grad8"></div>
+</body>
+</html>
