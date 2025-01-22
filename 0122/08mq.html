@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미디어 쿼리 연습</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background-color: rgba(9, 100, 160, 1);
+    }
+    #container {
+      width: 320px;        
+      margin: 50px auto;
+    }
+
+    .box {
+      width: 700px;
+      height: 250px;
+      border: 1px solid #222;
+      margin: 10px;
+      display: inline-block;
+      background-color: white;
+    }
+
+    .left-box img {
+      float: left;
+    }
+
+    .right-box h4, p {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    @media screen and (max-width:767px){
+      .box {
+        width: 300px;
+        height: auto;
+      }
+      .right-box {
+        text-align: center;
+      }
+
+      .left-box img{
+        float: none;
+      }
+
+      .right-box h4{
+        margin-top: 10px;
+      }
+      .left-box{
+        background-size: 100%;
+      }
+    }
+    @media screen and (min-width:768px) and (max-width:1439px) {
+      .box{
+        width: 570px;
+        float: left;
+      }
+    }
+    /* @media screen and (min-width:1440px) {
+      .box{
+        width: 1140px;
+      } */
+    /* } */
+  </style>
+</head>
+<body>
+  <main id="container">
+    <div class="box">
+      <div class="left-box">
+        <img src="../0121/images/11/images/1.jpg" alt="">
+      </div>
+      <div class="right-box">
+        <h4>일 분 전만큼 먼 시간은 없다.</h4>
+        <p>-Jim bishop</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="left-box">
+        <img src="../0121/images/11/images/2.jpg" alt="">
+      </div>
+      <div class="right-box">
+        <h4>낡은 옷은 그냥 입고 새 책을 사라</h4>
+        <p>-Austin Pelpps</p>
+      </div>
+    </div>
+</main>
+</body>
+</html>

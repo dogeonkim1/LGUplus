@@ -1,7 +1,8 @@
-body {
+#container{
   width: 1000px;
   margin: 0 auto;
 }
+
 ul {
   list-style: none;
   display: inline-block;
@@ -9,8 +10,9 @@ ul {
 
 .head-ul{
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-around;
+  align-items: fcenter;
+  padding: 0;
 }
 
 .head-ul li {
