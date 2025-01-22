@@ -1,6 +1,17 @@
+body{
+  background-color: li;그라데이션 효과 주기
+}
 #container{
   width: 1000px;
   margin: 0 auto;
+}
+
+.head-img{
+  display: inline-block;
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+
 }
 
 ul {
@@ -14,6 +25,7 @@ ul {
   align-items: fcenter;
   padding: 0;
 }
+
 
 .head-ul li {
   width: 85px;
@@ -32,7 +44,7 @@ ul {
   font-size: 0.8em;
 }
 
-img {
+.sec-img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
