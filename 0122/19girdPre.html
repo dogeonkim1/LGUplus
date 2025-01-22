@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .gallery {
+      display: grid;
+      width: 700px;
+      margin: 20px auto;
+      gap: 5px;
+      grid-template-areas: 
+      "photo1 photo1 photo2"
+      "photo1 photo1 photo3"
+      "photo6 photo5 photo4";
+    }
+
+
+    /*그리드 라인을 사용해서 배치하기*/
+    .photo1 {
+      grid-area: photo1;
+      width: 100%;
+    }
+    .photo2 {
+      grid-area: photo2;
+    }
+    .photo3 {
+      grid-area: photo3;
+    }
+    .photo4 {
+      grid-area: photo4;
+    }
+    .photo5 {
+      grid-area: photo5;
+    }
+    .photo6 {
+      grid-area: photo6;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery">
+    <img class="photo1" src="../0121/images/12/images/photo-1.jpg" alt="">
+    <img class="photo2" src="../0121/images/12/images/photo-2.jpg" alt="">
+    <img class="photo3" src="../0121/images/12/images/photo-3.jpg" alt="">
+    <img class="photo4" src="../0121/images/12/images/photo-4.jpg" alt="">
+    <img class="photo5" src="../0121/images/12/images/photo-5.jpg" alt="">
+    <img class="photo6" src="../0121/images/12/images/photo-6.jpg" alt="">
+  </div>
+</body>
+</html>

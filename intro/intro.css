@@ -1,5 +1,6 @@
 body{
-  background-color: li;그라데이션 효과 주기
+  background : blue;
+  background: linear-gradient(to right bottom, #00b7ff, #d6faff );
 }
 #container{
   width: 1000px;

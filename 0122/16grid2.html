@@ -6,19 +6,24 @@
   <title>CSS grid layout</title>
   <style>
     .container {
+      width: 600px;
+      border: 2px solid #222;
       display: grid;
-      grid-template-columns: 100px 200px 300px;
-      grid-template-rows: 50px 100px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px 30px; /*행 간격, 열 간격 순*/
+      
     }
     .items {
-      border: 1px solid #222;
       padding: 10px;
       font-size: 20px;
       text-align: center;
     }
 
     .items:nth-child(even) {
-      background-color: #ffc400;
+      background-color: #d6faff;
+    }
+    .items:nth-child(odd) {
+      background-color: #00b7ff;
     }
   </style>
 </head>
