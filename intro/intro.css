@@ -7,29 +7,34 @@ ul {
   display: inline-block;
 }
 
-ul li {
+.head-ul{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.head-ul li {
   width: 85px;
   height: 20px;
   border: 1px solid #222;
   float: left;
   padding: 20px;
   margin: 10px;
+  text-align: center;
+  border-radius: 35%;
 }
 
-ul li a {
-  
-}
-
-ul a {
+.head-ul li a{
   text-decoration: none;
   color: black;
-  
+  font-size: 0.8em;
 }
 
 img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  margin: 20px 0 0 30px;
 }
 
 section {
