@@ -4,7 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>미디어 쿼리 실습</title>
-  <style></style>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    /*미디어 쿼리 작성*/
+    @media screen and (min-width: 768px) and (max-width:1023px) {
+      body {
+        background-color: gray;
+        color: white;
+      }
+    }
+  </style>
 </head>
 <body>
   <h1>안녕하세요?</h1>
