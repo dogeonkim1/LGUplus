@@ -22,6 +22,15 @@
       padding: 0.5rem 0;
       color: #fff;
       text-decoration: none;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ff7a18;
+    }
+
+    /*:has 가상 선택자 사용*/
+    nav:has(a:hover) a:not(:hover) {
+      opacity: 0.3;
     }
   </style>
 </head>
