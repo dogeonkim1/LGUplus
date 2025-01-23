@@ -1,0 +1,80 @@
+body {
+  width: 1000px;
+  margin: 0 auto;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 40px;
+
+}
+nav a:hover {
+  color: black;
+}
+
+nav:has(a:hover) a:not(:hover) {
+  opacity: 0.5;
+}
+.contents{
+  margin-top: 70px;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+li a {
+  
+}
+
+header {
+  height: 100px;
+  background-color: #00a;
+}
+
+#logo {
+  float: left;
+  padding: 10px;
+}
+
+#topMenu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 35px;
+}
+
+.right {
+  float: right;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+img {
+  border-radius: 20px;
+  width: 350px;
+}
+
+.Healing, .activity {
+  display: inline;
+}
+
