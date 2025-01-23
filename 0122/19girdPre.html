@@ -6,14 +6,21 @@
   <title>Document</title>
   <style>
     .gallery {
-      display: grid;
       width: 700px;
       margin: 20px auto;
-      gap: 5px;
+      display: grid;
       grid-template-areas: 
       "photo1 photo1 photo2"
       "photo1 photo1 photo3"
       "photo6 photo5 photo4";
+      gap: 5px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
     }
 
 
@@ -41,12 +48,12 @@
 </head>
 <body>
   <div class="gallery">
-    <img class="photo1" src="../0121/images/12/images/photo-1.jpg" alt="">
-    <img class="photo2" src="../0121/images/12/images/photo-2.jpg" alt="">
-    <img class="photo3" src="../0121/images/12/images/photo-3.jpg" alt="">
-    <img class="photo4" src="../0121/images/12/images/photo-4.jpg" alt="">
-    <img class="photo5" src="../0121/images/12/images/photo-5.jpg" alt="">
-    <img class="photo6" src="../0121/images/12/images/photo-6.jpg" alt="">
+    <img class="photo1" src="../0121/images/12/images/photo-1.jpg" alt="1">
+    <img class="photo2" src="../0121/images/12/images/photo-2.jpg" alt="2">
+    <img class="photo3" src="../0121/images/12/images/photo-3.jpg" alt="3">
+    <img class="photo4" src="../0121/images/12/images/photo-4.jpg" alt="4">
+    <img class="photo5" src="../0121/images/12/images/photo-5.jpg" alt="5">
+    <img class="photo6" src="../0121/images/12/images/photo-6.jpg" alt="6">
   </div>
 </body>
 </html>
