@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #fa0;
+
+      /* 2초동안 애니메이션을 실행
+      animation-name: slidRight;
+      animation-duration: 2s;
+
+      애니메이션 무한 반복
+      animation-iteration-count: infinite;
+      animation-direction: alternate; */
+
+      /*한번에 애니메이션 작성하기*/
+      animation: slidRight 0.2s alternate-reverse infinite;
+    }
+
+    /*@keyframes로 애니메이션을 정의*/
+    @keyframes slidRight {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translate(1000px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

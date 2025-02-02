@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .origin {
+      width: 152px;
+      height: 180px;
+      border: 1px solid black;
+      margin: 30px;
+      float: left;
+      perspective: 200px;
+    }
+    .box {
+      width: 152px;
+      height: 180px;
+      margin: 30px;
+    }
+    .rotatex:hover {
+      transform: rotateX(50deg);
+    }
+
+    .origin > div {
+      transition: all 3s;
+    }
+
+    .rotatey:hover {
+      transform: rotateY(50deg);
+    }
+    .rotatez:hover {
+      transform: rotateZ(-50deg);
+    }
+    .rotatexyz:hover {
+      transform: rotate3d(2.5, 1.2, -1.5, 55deg);
+    }
+
+    /*트랜지션 효과 추가*/
+    
+  </style>
+</head>
+<body>
+  <div class="origin">
+    <div class="rotatex">
+      <img src="../0121/images/14/images/sunset.jpg" alt="">
+    </div>
+  </div>
+  <div class="origin">
+    <div class="rotatey">
+      <img src="../0121/images/14/images/sunset.jpg" alt="">
+    </div>
+  </div>
+  <div class="origin">
+    <div class="rotatez">
+      <img src="../0121/images/14/images/sunset.jpg" alt="">
+    </div>
+  </div>
+  <div class="origin">
+    <div class="rotatexyz">
+      <img src="../0121/images/14/images/sunset.jpg" alt="">
+    </div>
+  </div>
+</body>
+</html>
