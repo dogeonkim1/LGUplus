@@ -14,9 +14,9 @@ type 타입명A{
 type 타입명C = 타입명A & 타입명B;
 */
 
-type cup = {sizr:string}
+type cup = {size:string}
 type brand = {brandName:string}
 type brandCup = cup & brand;
 
 let starbucks : brandCup = {size:'grande', brandName:'스타벅스'}
-console.log()
+console.log(starbucks)
