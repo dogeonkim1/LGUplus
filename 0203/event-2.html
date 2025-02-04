@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom event객체</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="../0121/images/19/kitty-1.png" id="cat" alt="cat">
+  </div>
+  <script>
+    //Dom을 사용해서 이벤트를 처리하기
+    let cat = document.querySelector("#cat"); //id가 cat인 요소 선택
+    cat.onclick = changePic; //cat클릭하면 changePic함수 실행
+
+        //이미지가 변하는 함수
+    function changePic() {
+      cat.src = "../0121/images/19/kitty-2.png" //cat의 src속성을 변경함
+    };
+  </script>
+</body>
+</html>
