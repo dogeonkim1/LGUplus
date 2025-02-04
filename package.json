@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/dogeonkim1/LGUplus#readme",
   "description": "",
-  "dependencies": {
+  "devDependencies": {
     "typescript": "^5.7.3"
   }
 }
