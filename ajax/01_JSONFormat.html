@@ -24,11 +24,39 @@
     console.log(typeof jsonData)
     console.log('space jsonData:', JSON.stringify(obj, null, 2))
 
+
+    /*
+    replacer 함수(key, value)
+    key 속성
+    value 값
+    */
+
     function filter(key, value){
       //undifined를 리턴하면 해당 속성이 반환되지 않으므로 값이 number인 속성은 filering된다.
       return typeof value === 'number'? undefined:value;
     }
     console.log('replacer jsonData:', JSON.stringify(obj, filter, 2))
+
+
+    const todos = [
+      {id:1, content:"html", complated:true},
+      {id:2, content:"css", complated:true},
+      {id:3, content:"javascript", complated:false},
+    ]
+
+    console.log('array json', JSON.stringify(todos, null, 2));
+
+    /*
+    storage : 브라우저에 데이터를 저장하는 공간
+        localstorage : 제거 명령이 있기 전까지 계속 유지 (파일 형태)
+        sessionStorage : 세션이 끊기면 제가 => 브라우저가 종료되면 제가 (메모리에 유지) 
+
+        setItem(key, value)
+          key   : value를 구별하기 위한 키
+          value : storage 저장할 데이터
+    */
+    localStorage.setItem('todos', JSON.stringify(todos))
+    
   </script>
 </head>
 <body>
