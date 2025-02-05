@@ -33,12 +33,21 @@
   </div>
 
   <script>
+    const obj = {
+      name : "dongchan",
+    }
+
+    
+    
     let cat = document.querySelector("#cat");
 
-    //이벤트 리스너 안에서 함수 선언
-    cat.addEventListener("mouseover", () => {
+    let img = () => {
       cat.src = '../0121/images/19/kitty-2.png';
-    });
+    }
+
+    
+    //이벤트 리스너 안에서 함수 선언
+    cat.addEventListener("mouseover",img2);
     cat.addEventListener("mouseout", () =>{
       cat.src = '../0121/images/19/kitty-1.png';
     });
