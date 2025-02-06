@@ -1,3 +1,38 @@
+/*
+Web에서 상대 경로 기준은 현재 화면이 표시되고 있는 url(주소창의 url)이다.
+그래서 cafe.js를 기준으로 경로를 설정하면 안됨.
+cafe.js는 index.html에서 사용하므로 index.html을 기준으로 해야한다.
+*/
+fetch('assets/data/essay.json')
+.then(Response =>  Response.json())
+.then(data => {
+  console.log(data)
+  essayBook(data)
+})
+
+function essayBook(data){                         //li 반복
+  let content = 
+    `
+      <h3 class="menu_title">[에세이]</h3>
+          <ul>`
+
+          data.forEach(item => { content +=
+            `<li>                             
+              <div class="menu_item">
+                <div class="menu_item_img">
+                  <img src="img/book/${item.isbn}.png" alt="${item.title}">
+                </div>
+                <div class="menu_item_info">
+                  ${item.title}<br> (${item.price}원)
+                </div>
+              </div>
+            </li>`
+          });
+
+          content +=`</ul>`;
+          document.getElementById('econtent').innerHTML = content;
+}
+
 
 /*사용자 인증 처리를 위한 함수 */
 function login() {

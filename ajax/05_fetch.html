@@ -19,23 +19,15 @@
     //버튼이 클릭이 되면 비동기 통신 시도
     document.querySelector('#btn').addEventListener("click", function(){
       fetch('https://jsonplaceholder.typicode.com/posts/1')
-      .then(response => response.json())
-      .then(info => {
+      .then(response => response.json())    //응다 데이터가 JSON인 경우 .json()을 통해 JSON 객체로 변경해서
+      .then(info => {                       //리턴 JSON객체를 받아서 화면 처리
         console.log(info)
         let content = `  
             <table>
-              <tr>
-                <td>userid</td><td>${info.userId}</td>
-              </tr>
-              <tr>
-                <td>id</td><td>${info.id}</td>
-              </tr>
-              <tr>
-                <td>title</td><td>${info.title}</td>
-              </tr>
-              <tr>
-                <td>body</td><td>${info.body}</td>
-              </tr>
+              <tr><td>userid</td><td>${info.userId}</td></tr>
+              <tr><td>id</td><td>${info.id}</td></tr>
+              <tr><td>title</td><td>${info.title}</td></tr>
+              <tr><td>body</td><td>${info.body}</td></tr>
             </table>`
             document.querySelector('#content').innerHTML = content;
       })
