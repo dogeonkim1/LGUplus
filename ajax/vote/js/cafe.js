@@ -33,6 +33,48 @@ function essayBook(data){                         //li 반복
           document.getElementById('econtent').innerHTML = content;
 }
 
+fetch('assets/data/programming.xml')
+.then(Response =>  Response.text())
+.then(data => {
+  console.log(data)
+  programmingBook(data)
+})
+
+
+function programmingBook(data){
+  //전송받은 xml을 DOM tree로 구성하기 위해 DOMParser 객체를 생성한다.
+let parser =new DOMParser();
+
+//문자열 형태로 된 xml정보를 분석해서 DOM tree 로 구성
+let xml = parser.parseFromString(data, "application/xml");
+
+//전송받은 xml에서 book태그 모두 찾기
+let books = xml.querySelectorAll('book');
+  let content = 
+    `
+      <h3 class="menu_title">[프로그래밍]</h3>
+          <ul>`
+
+          books.forEach(book => {  //book xml을 반복 | 63줄 :book 태그에서 isbn태그 찾기
+            content +=
+            `<li>                             
+              <div class="menu_item">
+                <div class="menu_item_img">
+                  <img src="img/book/${book.querySelector('isbn').textContent}.png" 
+                  alt="${book.querySelector('title').textContent}">
+                </div>
+                <div class="menu_item_info">
+                  ${book.querySelector('title').textContent}<br> 
+                  (${book.querySelector('price').textContent}원)
+                </div>
+              </div>
+            </li>`
+          });
+
+          content +=`</ul>`;
+          document.getElementById('pcontent').innerHTML = content;
+}
+
 
 /*사용자 인증 처리를 위한 함수 */
 function login() {
