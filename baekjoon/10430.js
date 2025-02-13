@@ -1,12 +1,17 @@
 //브론즈5 나머지
-const fs = require('fs');
-const input = fs.readFileSync(0, 'utf-8').trim().split('\n');
+let fs = require('fs');
+let input = fs.readFileSync('input.txt').toString().split(' ');
+// console.log(input)
+input = input.map(Number)
+// console.log(input)
 
 const a = input[0];
 const b = input[1];
 const c = input[2];
 
-let A = Math.floor(A + B) % C;
-let B = Math.floor((A % C) + (B % C)) % C;
-let C = Math.floor(A * B) % C;
-let D = Math.floor((A % C) * (B % C)) % C;
+let A = Math.floor(a + b) % c;
+let B = Math.floor((a % c) + (b % c)) % c;
+let C = Math.floor(a * b) % c;
+let D = Math.floor((a % c) * (b % c)) % c;
+// console.log(Math.floor(a + b))
+console.log(`${A}\n${B}\n${C}\n${D}`);
