@@ -6,7 +6,7 @@ const fs = require("fs");
 const input = fs.readFileSync("input.txt").toString().trim().split("\n")
 
 let T = Number(input[0]); //테스트 케이스의 갯수
-console.log(T)
+// console.log(T)
 
 for(let i = 1; i <= T; i++){
   let[A, B] = input[i].split(' ').map(Number)
