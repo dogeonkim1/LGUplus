@@ -1,0 +1,7 @@
+let fs = require('fs');
+let input = fs.readFileSync('input.txt').toString().split(' ');
+
+let A = input[0];
+let B = input[1];
+
+console.log(A * B);

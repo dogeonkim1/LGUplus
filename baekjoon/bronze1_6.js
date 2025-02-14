@@ -4,4 +4,4 @@ let input = fs.readFileSync('input.txt').toString().split(' ').map(Number);
 let A = input[0];
 let B = input[1];
 
-console.log(A + B);
+console.log(`${A + B}\n${A - B}\n${A * B}\n${Math.floor(A / B)}\n${A % B}\n`)
