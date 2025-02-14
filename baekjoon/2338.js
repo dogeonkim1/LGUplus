@@ -1,8 +1,8 @@
 let fs = require('fs');
 let input = fs.readFileSync('input.txt').toString().trim().split('\n');
-// input = input.map(Number)
+input = input.map(Number)
 
-let A = BigInt(input[0]);
-let B = BigInt(input[1]);
+let A = input[0]
+let B = input[1]
 
-console.log(`${A + B}\n${A - B}\n${A * B}\n`);
+console.log(A + B)
