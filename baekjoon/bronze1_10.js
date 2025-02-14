@@ -15,7 +15,7 @@ let input = fs.readFileSync('input.txt').toString().trim().split('\n');
 
 
 let a = Number(input[0]); // 첫 번째 값만 숫자로 변환
-let stringB = input[1];
+let stringB = input[1];   //문자는 각 자리마다 하나씩 뽑아서 연산이 가능
 
 let one = stringB[2];
 let ten = stringB[1];
