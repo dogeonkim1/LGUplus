@@ -112,3 +112,52 @@ const arr16 = [10, 20, 30, 40, 50];
 const deleted = arr16.splice(1, 2);
 console.log(arr16);
 console.log(deleted);
+
+/*----------------------------------filter---------------------------------------------*/
+//filter메서드를 이용하면 원하는 조건에 해당하는 값만 남긴 배열을 만들 수 있다.
+const number2 = [1, 2, 3, 4, 5]
+const evens = number2.filter(num => num % 2 === 0);   //짝수
+console.log(evens)
+
+const number3 = [1, 2, 3, 4, 5];
+const sum3 = number3.filter(num => num % 2 ===1);     //홀수
+console.log(sum3)
+
+/*-------------------------------------reduce------------------------------------------*/
+//reduce : 배열의 전체 데이터를 하나로 합칠 수 있다.
+//filter, map은 인수를 1개 받았지만 reduce는 받아야 할 익명 함수가 2개이다.
+//첫 번째 인자는 합쳐진 상태를 의미하고, 두 번째 인자는 현재 순회하며 바라보고 있는 데이터를 의미
+const numero =  [1, 2, 3, 4, 5]
+const sum2 = numero.reduce((a, b) => a + b);
+console.log(sum2)
+//1.  a=0  b=1    (합쳐진 상태는 없으므로 0, 현재 순회하며 바라보는 데이터 1)
+//2.  a=1  b=2    (합쳐진 상태 1, 현재 순회하며 바라보는 데이터 2)
+//3.  a=3  b=3    (합쳐진 상태 3, 현재 순회하며 바라보는 데이터 3)
+//4.  a=6  b=4    (합쳐진 상태 6, 현재 순회하며 바라보든 데이터 4)
+//5.  a=10 b=5   (합쳐진 상태 10, 현재 순회하며 바라보는 데이터 5)
+
+/*--------------------------------------sort--------------------------------------------*/
+//sort : 배열을 정해진 규칙에 맞춰 정렬함.
+//아무런 조건을 달지 않고 실행할 경우 문자열이라 가정 후 정렬
+let out = [1, 10, 5, 3, 100].sort();
+console.log(out)  //1, 10, 100, 3, 5 : 문자열로 바라보고 정렬했기 때문에 아스키코드값;
+
+out.sort((a, b) => a -b); //오름차순 정렬 [1, 3, 5, 10, 100]
+console.log(out)
+out.sort((a, b) => b - a);//내림차순 정렬 [100, 10, 5, 3, 1]
+console.log(out)    
+//(a, b) => a - b의 원리
+//a - b가 음수 -> a가 b보다 앞에 위치
+//a - b가 양수 -> b가 a보다 앞에 위치
+//a - b가 0 -> 위치 유지
+
+let people = [            //객체 배열 정렬 : arr.sort((a, b) => a.key - b.key)
+  {name: "Rhama", age:25},
+  {name: "Topak", age:30},
+  {name: "Drake", age:80},
+  {name: "Snop", age:45},
+  {name: "Biggie", age:12}
+];
+
+people.sort((a, b) => a.age - b.age);
+console.log(people)
